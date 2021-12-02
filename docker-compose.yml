@@ -2,7 +2,7 @@ version: '3'
 
 services:
   app:
-    image: 'docker-tenpo-interview:latest'
+    image: 'tenpo-interview:latest'
     depends_on:
       - db
       - redis-server
