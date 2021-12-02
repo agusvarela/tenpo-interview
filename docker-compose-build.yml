@@ -2,9 +2,7 @@ version: '4'
 
 services:
   app:
-    image: 'tenpo-interview:latest'
-    build:
-      context: src/main/docker
+    image: 'avarela10/tenpo-interview:latest'
     container_name: tenpo_interview_app
     depends_on:
       - db
@@ -18,7 +16,7 @@ services:
     links:
       - redis
   db:
-    image: 'postgres:13.1-alpine'
+    image: 'postgres:14.1'
     container_name: db
     environment:
       - POSTGRES_USER=postgres

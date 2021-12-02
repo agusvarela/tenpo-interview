@@ -2,7 +2,7 @@ version: '4'
 
 services:
   app:
-    image: 'tenpo-interview:latest'
+    image: 'avarela10/tenpo-interview:latest'
     depends_on:
       - db
     environment:

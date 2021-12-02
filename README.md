@@ -27,7 +27,7 @@ This application uses postgresql for data-base. Note that `spring.jpa.hibernate.
 
 ## Redis Cache
 
-This application uses redis cache to store token with expired time. The redis be dropped and created in each deploy of the application.
+This application uses redis cache to store token with expired time (Note that `jwt.expiration.time=300000` is setting the expiration time in 5 minutes. The redis be dropped and created in each deploy of the application.
 
 -------------------
 
