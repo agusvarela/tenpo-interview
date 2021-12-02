@@ -48,25 +48,25 @@ The `AuthenticationRequestFilter` filter is applied to the followings endpoints 
 2. Fork and clone this repository
 
 ```
-$ git clone https://github.com/agusvarela/tenpo-interview.git
+git clone https://github.com/agusvarela/tenpo-interview.git
 ```
 
 3. Navigate to the project folder
 
 ```
-$ cd tenpo-interview
+cd tenpo-interview
 ```
 
 4. Install Maven dependencies
 
 ```
-$ mvn install
+mvn install
 ```
 
 5. In the project folder, run the project on docker containers using docker-compose. It will pull and run images required from dockerHub (Make sure that port 8080 is not in use)
 
 ```
-$ cd docker-compose up
+docker-compose up
 ```
 
 ----------
