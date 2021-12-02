@@ -5,7 +5,7 @@
 ## Authors
 - [Agustin Varela](https://github.com/agusvarela)
 
-# Stack
+## Stack
 
 ![](https://img.shields.io/badge/java_11-✓-blue.svg)
 ![](https://img.shields.io/badge/spring_boot-✓-blue.svg)
@@ -69,11 +69,11 @@ $ mvn install
 $ cd docker-compose up
 ```
 
-6. Navigate to `http://localhost:8080/swagger-ui/` in your browser in order to test APIs or use Postman using the following link:
-   https://www.getpostman.com/collections/6485d2177156c766a4f2.
-
 ----------
 
 ## Documentation
 Once the application is running, you can find all the information to test the application via swagger:
 http://localhost:8080/swagger-ui/#/
+
+Or you could see and import the Postman collection:
+https://documenter.getpostman.com/view/10728290/UVJfjbFr

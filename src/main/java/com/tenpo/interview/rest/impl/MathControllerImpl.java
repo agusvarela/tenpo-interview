@@ -25,7 +25,7 @@ public class MathControllerImpl implements MathController {
 
     @Override
     public ResponseEntity<SumResponse> sumNumbers(SumRequest sumRequest) {
-        log.info(SUM_VALUES_LOG_MESSAGE, sumRequest.getValue1(), sumRequest.getValue2());
+        log.info(SUM_VALUES_LOG_MESSAGE, sumRequest.getFirstOperand(), sumRequest.getSecondOperand());
 
         return ResponseEntity.ok(SumResponse.builder()
                 .sumResult(mathService.sumValues(sumRequest))

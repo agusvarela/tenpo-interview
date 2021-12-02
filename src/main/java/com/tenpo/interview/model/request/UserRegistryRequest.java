@@ -1,7 +1,7 @@
 package com.tenpo.interview.model.request;
 
-import com.tenpo.interview.validatior.PasswordValueMatch;
-import com.tenpo.interview.validatior.ValidPassword;
+import com.tenpo.interview.validator.PasswordValueMatch;
+import com.tenpo.interview.validator.ValidPassword;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

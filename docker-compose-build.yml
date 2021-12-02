@@ -1,4 +1,4 @@
-version: '3'
+version: '4'
 
 services:
   app:
@@ -8,7 +8,6 @@ services:
     container_name: tenpo_interview_app
     depends_on:
       - db
-      - redis-server
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/tenpo_interview
       - SPRING_DATASOURCE_USERNAME=postgres
@@ -16,15 +15,18 @@ services:
       - SPRING_JPA_HIBERNATE_DDL_AUTO=create-drop
     ports:
       - 8080:8080
-  redis-server:
-    image: "redis:6.2.6"
-    command: redis-server
-    ports:
-      - "6379:6379"
+    links:
+      - redis
   db:
-    image: 'postgres:14.1'
+    image: 'postgres:13.1-alpine'
     container_name: db
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=admin
       - POSTGRES_DB=tenpo_interview
+  redis:
+    container_name: redis
+    image: "redis:alpine"
+    hostname: redis
+    ports:
+      - "6379:6379"

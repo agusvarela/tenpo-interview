@@ -19,10 +19,10 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 public class SumRequest {
 
-    @NotNull(message = "Value 1 is missing.")
-    private BigDecimal value1;
+    @NotNull(message = "First Operand is missing.")
+    private BigDecimal firstOperand;
 
-    @NotNull(message = "Value 2 is missing.")
-    private BigDecimal value2;
+    @NotNull(message = "Second Operand is missing.")
+    private BigDecimal secondOperand;
 
 }

@@ -24,9 +24,9 @@ class MathControllerImplTest {
 
     private final MathService mathService = new MathService();
 
-    private static final int VAL_1 = 2;
-    private static final int VAL_2 = 5;
-    private static final BigDecimal RESULT_1 = new BigDecimal(7);
+    private static final int FIRST_OPERAND = 2;
+    private static final int SECOND_OPERAND = 5;
+    private static final BigDecimal SUM_RESULT = new BigDecimal(7);
 
     @BeforeEach
     public void setup() {
@@ -36,13 +36,13 @@ class MathControllerImplTest {
     @Test
     public void whenSumNumbersShouldReturnSuccessfulResponse() {
         SumRequest sumRequest = SumRequest.builder()
-                .value1(new BigDecimal(VAL_1))
-                .value2(new BigDecimal(VAL_2))
+                .firstOperand(new BigDecimal(FIRST_OPERAND))
+                .secondOperand(new BigDecimal(SECOND_OPERAND))
                 .build();
 
         ResponseEntity<SumResponse> result = mathController.sumNumbers(sumRequest);
 
         assertNotNull(result.getBody());
-        assertEquals(RESULT_1, result.getBody().getSumResult());
+        assertEquals(SUM_RESULT, result.getBody().getSumResult());
     }
 }

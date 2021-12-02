@@ -1,6 +1,6 @@
 package com.tenpo.interview.util;
 
-import com.tenpo.interview.validatior.ValidPassword;
+import com.tenpo.interview.validator.ValidPassword;
 import org.apache.commons.lang3.StringUtils;
 import org.passay.LengthRule;
 import org.passay.PasswordData;

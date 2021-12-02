@@ -1,6 +1,6 @@
 package com.tenpo.interview.util;
 
-import com.tenpo.interview.validatior.PasswordValueMatch;
+import com.tenpo.interview.validator.PasswordValueMatch;
 import org.springframework.beans.BeanWrapperImpl;
 
 import javax.validation.ConstraintValidator;

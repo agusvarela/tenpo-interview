@@ -24,6 +24,6 @@ public class MathService {
      * @return the result
      */
     public BigDecimal sumValues(SumRequest sumRequest) {
-        return sumRequest.getValue1().add(sumRequest.getValue2());
+        return sumRequest.getFirstOperand().add(sumRequest.getSecondOperand());
     }
 }

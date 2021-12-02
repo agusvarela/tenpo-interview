@@ -42,7 +42,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
  * @author Agustin-Varela
  */
 @Api(value = "users")
-@RequestMapping(value = "/users", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/users")
 @CrossOrigin
 public interface UserController {
 
@@ -62,7 +62,7 @@ public interface UserController {
                     @ApiResponse(code = SC_UNAUTHORIZED, message = UNAUTHORIZED_MESSAGE, response = ApiError.class),
                     @ApiResponse(code = SC_BAD_REQUEST, message = BAD_REQUEST_MESSAGE, response = ApiError.class)
             })
-    @PostMapping(value = "/register")
+    @PostMapping(value = "/register", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
     ResponseEntity<UserEntity> userRegistry(@RequestBody @Valid UserRegistryRequest userRegistryRequest);
 
     /**
@@ -80,7 +80,7 @@ public interface UserController {
                     @ApiResponse(code = SC_METHOD_NOT_ALLOWED, message = METHOD_NOT_ALLOWED_MESSAGE,
                             response = ApiError.class)
             })
-    @PostMapping(value = "/login")
+    @PostMapping(value = "/login", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
     ResponseEntity<LoginResponse> loginUser(@RequestBody @Valid LoginRequest loginRequest);
 
     /**
@@ -96,6 +96,6 @@ public interface UserController {
                     @ApiResponse(code = SC_OK, message = OK_MESSAGE, response = LogoutResponse.class),
                     @ApiResponse(code = SC_UNAUTHORIZED, message = UNAUTHORIZED_MESSAGE, response = ApiError.class)
             })
-    @DeleteMapping(value = "/logout")
+    @DeleteMapping(value = "/logout", produces = APPLICATION_JSON_VALUE)
     ResponseEntity<LogoutResponse> logoutUser(@RequestHeader(value="Authorization") @NotEmpty String token);
 }

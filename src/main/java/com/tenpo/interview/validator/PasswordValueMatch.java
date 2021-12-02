@@ -1,4 +1,4 @@
-package com.tenpo.interview.validatior;
+package com.tenpo.interview.validator;
 
 import com.tenpo.interview.util.PasswordValueMatchValidatorUtil;
 
